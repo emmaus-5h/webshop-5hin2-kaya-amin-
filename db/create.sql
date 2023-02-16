@@ -11,12 +11,29 @@ CREATE TABLE products (
   minuten NUMERIC(10),
   model_id integer,
   rating_id integer,
-  _id integer
+  topsnelheid_id integer
+  energiebron_id INTEGER
 );
 CREATE TABLE model(
   id INTEGER PRIMARY KEY AUTOINCREMENT,
- name varchar 
+ model INTEGER
+);
 
+CREATE TABLE rating (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+ rating INTEGER
+);
+
+  CREATE TABLE topsnelheid (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+ topsnelheid INTEGER
+);
+
+CREATE TABLE energiebron (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+ enegrgiebron INTEGER
+);
+  
 --
 -- populate with data
 --
@@ -26,61 +43,46 @@ CREATE TABLE model(
 -- want different data? check: https://www.mockaroo.com/910b6c20
 --
 
-insert into products ( name, discription, code, price, model, rating) values ('1-series', 'kleine compacte achterwiel aangedreven auto', '1592', 13,5, 1;
-insert into products ( name, discription, code, price, model, rating) values ('2-series', 'sportieve achterwiel aangedreven auto', '1592', 13,5, 2;
-insert into products ( name, discription, code, price, model, rating) values ('3-series', 'sportieve sedan', '1592', 13,5, 3;
-insert into products ( name, discription, code, price, model, rating) values ('4-series', 'sportieve kleine coupe', '1592', 13,5, 4;
-  insert into products ( name, discription, code, price, model, rating) values ('5-series', 'grote sedan', '1592', 13,5, 5;
-  insert into products ( name, discription, code, price, model, rating) values ('6-series', 'grote sportieve coupe', '1592', 13,5, 6;
-  insert into products ( name, discription, code, price, model, rating) values ('7-series', 'grote luxe limousine', '1592', 13,5, 7;
-  insert into products ( name, discription, code, price, model, rating) values ('8-series', 'supercar coupe', '1592', 13,5, 8;
-  insert into products ( name, discription, code, price, model, rating) values ('x5-series', 'grote hoge SUV', '1592', 13,5, 9;
-  insert into products ( name, discription, code, price, model, rating) values ('x6-series', 'grote hoge SUV met coupe look ', '1592', 13,5, 10;
+insert into products ( name, discription, code, price, model_id, rating_id, topsnelheid_id) values ('1-series', 'kleine compacte achterwiel aangedreven auto', '1', 13, 1, 3, 1;
+insert into products ( name, discription, code, price, model_id, rating_id, topsnelheid_id) values ('2-series', 'sportieve achterwiel aangedreven auto', '2', 13, 2, 3, 2;
+insert into products ( name, discription, code, price, model_id, rating_id, topsnelheid_id) values ('3-series', 'sportieve sedan', '3', 13, 3, 2, 2;
+insert into products ( name, discription, code, price, model_id, rating_id, topsnelheid_id) values ('4-series', 'sportieve kleine coupe', '4', 13, 4, 2, 2;
+  insert into products ( name, discription, code, price, model_id, rating_id, topsnelheid_id) values ('5-series', 'grote sedan', '5', 13, 5 , 1, 2;
+  insert into products ( name, discription, code, price, model_id, rating_id, topsnelheid_id) values ('6-series', 'grote sportieve coupe', '6', 13, 6, 2, 3 ;
+  insert into products ( name, discription, code, price, model_id, rating_id, topsnelheid_id) values ('7-series', 'grote luxe limousine', '7', 13, 7, 1, 1;
+  insert into products ( name, discription, code, price, model_id, rating_id, topsnelheid_id) values ('8-series', 'supercar coupe', '8', 13, 8, 2, 3;
+  insert into products ( name, discription, code, price, model_id, rating_id, topsnelheid_id) values ('x5-series', 'grote hoge SUV', '9', 13, 9, 1, 1;
+  insert into products ( name, discription, code, price, model_id, rating_id, topsnelheid_id) values ('x6-series', 'grote hoge SUV met coupe look ', '10', 13, 10, 1, 1;
   
   
   
   
-insert into model (name) values ('1-Series');  
-insert into model (name) values ('2-Series');  
-insert into model (name) values ('3-series');
-insert into model (name) values ('4-Series');  
-insert into model (name) values ('5-Series');  
-insert into model (name) values ('6-series');
-insert into model (name) values ('7-Series');  
-insert into model (name) values ('8-Series');  
-insert into model (name) values ('x5-series');
-insert into model (name) values ('x6-series');
+insert into model (model_id) values ('1-Series');  
+insert into model (model_id) values ('2-Series');  
+insert into model (model_id) values ('3-series');
+insert into model (model_id) values ('4-Series');  
+insert into model (model_id) values ('5-Series');  
+insert into model (model_id) values ('6-series');
+insert into model (model_id) values ('7-Series');  
+insert into model (model_id) values ('8-Series');  
+insert into model (model_id) values ('x5-series');
+insert into model (model_id) values ('x6-series');
 
-insert into rating (name) values ("heel veilig");
-insert into rating (name) values ("standaard veilig");
-insert into rating (name) values ("minimaal veilig");
+insert into rating (rating_id) values ("heel veilig");
+insert into rating (rating_id) values ("standaard veilig");
+insert into rating (rating_id) values ("minimaal veilig");
 
-
-
-
-
-
+insert into topsnelheid (topsnelheid_id) values ("lage topsnelheid");
+insert into topsnelheid (topsnelheid_id) values ("Gewone topsnelheid");
+insert into topsnelheid (topsnelheid_id) values ("Hoge topnelheid");
 
 
-
-
-
+insert into energiebron (energiebron_id) values ("Brandstof");
+insert into energiebron (energiebron_id) values ("Hybrid");
+insert into energiebron (energiebron_id) values ("Elektrisch");
 
 
 
 
 
 
-insert into ratings (name) values ("good place");
-insert into ratings (name) values ("oke");
-insert into ratings (name) values ("dont go");
-
-insert into tickets (ticketsinfo) values ('Out of tickets.');
-insert into tickets (ticketsinfo) values ('Limited amount left');
-insert into tickets (ticketsinfo) values ('tickets Available');
-
- insert into products (name, description, code, price) values ('Post Mortem', 'Nulla ut erat id mauris vulputate elementum. Nullam varius.', '077030122-3', 11);
-insert into products (name, description, code, price) values ('Scarlet and the Black, The', 'Pellentesque at nulla. Suspendisse potenti.', '445924201-X', 13.5);
-insert into products (name, description, code, price) values ('Aquí llega Condemor, el pecador de la pradera', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa.', '693155505-7', 13.5);
-insert into products (name, description, code, price) values ('Kiss for Corliss, A (Almost a Bride)', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.', '686928463-6', 14);
-insert into products (name, description, code, price) values ('Velvet Goldmine', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '492662523-7', 14);

@@ -64,10 +64,15 @@ function getCategories(request, response) {
   console.log('API verstuurt /api/categories/')
 }
 
+
+
+//de code hieronder zorgt ervoor dat de code wordt doorgestuurd naar de website//
+
+  
 function getProducts(request, response) {
   console.log('API ontvangt /api/products/', request.query)
   let data = []
-  const sqlOpdracht = db.prepare('SELECT products.id AS id, products.name AS name, products.discription AS discription, products.code AS code, products.price AS price, ratings.rating AS rating, topsnelheden.topsnelheid AS topsnelheid, energiebronnen.energiebron AS energiebron FROM products JOIN ratings ON ratings.id = products.rating_id JOIN topsnelheden ON topsnelheden.id = products.topsnelheid_id JOIN energiebronnen ON energiebronnen.id = products.energiebron_id JOIN models ON models.id = products.model_id ORDER BY id ASC')
+  const sqlOpdracht = db.prepare('SELECT products.id AS id, products.name AS name, models.model AS model, products.discription AS discription, products.code AS code, products.price AS price, ratings.rating AS rating, topsnelheden.topsnelheid AS topsnelheid, energiebronnen.energiebron AS energiebron FROM products JOIN ratings ON ratings.id = products.rating_id JOIN topsnelheden ON topsnelheden.id = products.topsnelheid_id JOIN energiebronnen ON energiebronnen.id = products.energiebron_id JOIN models ON models.id = products.model_id ORDER BY id ASC')
   data = sqlOpdracht.all()
   // console.log(JSON.stringify(data, null, 2))
   response.status(200).send(data)

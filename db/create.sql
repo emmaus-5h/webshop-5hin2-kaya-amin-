@@ -43,43 +43,49 @@ CREATE TABLE energiebronnen (
 -- want different data? check: https://www.mockaroo.com/910b6c20
 --
 
-insert into products ( name, discription, code, price, model_id, rating_id, topsnelheid_id, energiebron_id) values ('1-Series', 'Kleine compacte achterwiel aangedreven auto', '1', 10000, 1, 3, 1, 3);
-insert into products ( name, discription, code, price, model_id, rating_id, topsnelheid_id, energiebron_id) values ('2-Series', 'Sportieve achterwiel aangedreven auto', '2', 15000, 2, 3, 2, 2);
-insert into products ( name, discription, code, price, model_id, rating_id, topsnelheid_id, energiebron_id) values ('3-Series', 'Sportieve sedan', '3', 20000, 3, 2, 2, 1);
-insert into products ( name, discription, code, price, model_id, rating_id, topsnelheid_id, energiebron_id) values ('4-Series', 'Sportieve kleine coupe', '4', 25000, 4, 2, 2, 1);
-  insert into products ( name, discription, code, price, model_id, rating_id, topsnelheid_id, energiebron_id) values ('5-Series', 'Grote sedan', '5', 30000, 5 , 1, 2, 1);
-  insert into products ( name, discription, code, price, model_id, rating_id, topsnelheid_id, energiebron_id) values ('6-Series', 'Grote sportieve coupe', '6', 35000, 6, 2, 3, 1);
-  insert into products ( name, discription, code, price, model_id, rating_id, topsnelheid_id, energiebron_id) values ('7-Series', 'Grote luxe limousine', '7', 40000, 7, 1, 1, 1);
-  insert into products ( name, discription, code, price, model_id, rating_id, topsnelheid_id, energiebron_id) values ('8-Series', 'Supercar coupe', '8', 45000, 8, 2, 3, 1);
-  insert into products ( name, discription, code, price, model_id, rating_id, topsnelheid_id, energiebron_id) values ('X5-Series', 'Grote hoge SUV', '9', 50000, 9, 1, 1, 1);
-  insert into products ( name, discription, code, price, model_id, rating_id, topsnelheid_id, energiebron_id) values ('X6-Series', 'Grote hoge SUV met coupe look ', '10', 55000, 10, 1, 1, 1);
-  
-  
-  
-  
-insert into models (model) values ('1-Series');  
-insert into models (model) values ('2-Series');  
-insert into models (model) values ('3-series');
-insert into models (model) values ('4-Series');  
-insert into models (model) values ('5-Series');  
-insert into models (model) values ('6-series');
-insert into models (model) values ('7-Series');  
-insert into models (model) values ('8-Series');  
-insert into models (model) values ('X5-Series');
-insert into models (model) values ('X6-Series');
-
-insert into ratings (rating) values ("heel veilig");
-insert into ratings (rating) values ("standaard veilig");
-insert into ratings (rating) values ("minimaal veilig");
-
-insert into topsnelheden (topsnelheid) values ("Lage topsnelheid");
-insert into topsnelheden (topsnelheid) values ("Gewone topsnelheid");
-insert into topsnelheden (topsnelheid) values ("Hoge topnelheid");
 
 
-insert into energiebronnen (energiebron) values ("Brandstof");
-insert into energiebronnen (energiebron) values ("Hybrid");
-insert into energiebronnen (energiebron) values ("Elektrisch");
+
+--De code hieronder zorgt ervoor dat de tabellen in de database komen te staan--
+
+insert into products ( name, discription, code, price, model_id, rating_id, topsnelheid_id, energiebron_id) values ('BMW 1-Series', 'Kleine compacte achterwiel aangedreven auto', ' 1', 10000, 1, 3, 1, 3);
+insert into products ( name, discription, code, price, model_id, rating_id, topsnelheid_id, energiebron_id) values ('BMW 2-Series', 'Sportieve achterwiel aangedreven auto', ' 2', 15000, 2, 3, 2, 2);
+insert into products ( name, discription, code, price, model_id, rating_id, topsnelheid_id, energiebron_id) values ('BMW 3-Series', 'Sportieve sedan', ' 3', 20000, 3, 2, 2, 1);
+insert into products ( name, discription, code, price, model_id, rating_id, topsnelheid_id, energiebron_id) values ('BMW 4-Series', 'Sportieve kleine coupe', ' 4', 25000, 4, 2, 2, 1);
+  insert into products ( name, discription, code, price, model_id, rating_id, topsnelheid_id, energiebron_id) values ('BMW 5-Series', 'Grote sedan', ' 5', 30000, 5 , 1, 2, 1);
+  insert into products ( name, discription, code, price, model_id, rating_id, topsnelheid_id, energiebron_id) values ('BMW 6-Series', 'Grote sportieve coupe', ' 6', 35000, 6, 2, 3, 1);
+  insert into products ( name, discription, code, price, model_id, rating_id, topsnelheid_id, energiebron_id) values ('BMW 7-Series', 'Grote luxe limousine', ' 7', 40000, 7, 1, 1, 1);
+  insert into products ( name, discription, code, price, model_id, rating_id, topsnelheid_id, energiebron_id) values ('BMW 8-Series', 'Supercar coupe', ' 8', 45000, 8, 2, 3, 1);
+  insert into products ( name, discription, code, price, model_id, rating_id, topsnelheid_id, energiebron_id) values ('BMW X5-Series', 'Grote hoge SUV', ' 9', 50000, 9, 1, 1, 1);
+  insert into products ( name, discription, code, price, model_id, rating_id, topsnelheid_id, energiebron_id) values ('BMW X6-Series', 'Grote hoge SUV met coupe look ', ' 10', 55000, 10, 1, 1, 1);
+  
+  
+
+
+
+insert into models (model) values (' 1-Series');  
+insert into models (model) values (' 2-Series');  
+insert into models (model) values (' 3-series');
+insert into models (model) values (' 4-Series');  
+insert into models (model) values (' 5-Series');  
+insert into models (model) values ( '6-series');
+insert into models (model) values (' 7-Series');  
+insert into models (model) values (' 8-Series');  
+insert into models (model) values (' X5-Series');
+insert into models (model) values (' X6-Series');
+
+insert into ratings (rating) values (" Heel veilig");
+insert into ratings (rating) values (" Standaard veilig");
+insert into ratings (rating) values (" Minimaal veilig");
+
+insert into topsnelheden (topsnelheid) values (" Lage topsnelheid");
+insert into topsnelheden (topsnelheid) values (" Gewone topsnelheid");
+insert into topsnelheden (topsnelheid) values (" Hoge topnelheid");
+
+
+insert into energiebronnen (energiebron) values (" Brandstof");
+insert into energiebronnen (energiebron) values (" Hybrid");
+insert into energiebronnen (energiebron) values (" Elektrisch");
 
 
 

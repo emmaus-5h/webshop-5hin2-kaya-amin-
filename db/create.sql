@@ -49,8 +49,8 @@ CREATE TABLE energiebronnen (
 --De code hieronder zorgt ervoor dat de tabellen in de database komen te staan--
 
 insert into products ( name, discription, code, price, model_id, rating_id, topsnelheid_id, energiebron_id) values ('BMW 1-Series', 'Kleine compacte achterwiel aangedreven auto', ' 1', 10000, 1, 3, 1, 3);
-insert into products ( name, discription, code, price, model_id, rating_id, topsnelheid_id, energiebron_id) values ('BMW 2-Series', 'Sportieve achterwiel aangedreven auto', ' 2', 15000, 2, 3, 2, 2);
-insert into products ( name, discription, code, price, model_id, rating_id, topsnelheid_id, energiebron_id) values ('BMW 3-Series', 'Sportieve sedan', ' 3', 20000, 3, 2, 2, 1);
+insert into products ( name, discription, code, price, model_id, rating_id, topsnelheid_id, energiebron_id) values ('BMW 2-Series', 'Sportieve achterwiel aangedreven auto', ' 2',15000, 2, 3, 2, 2);
+insert into products ( name, discription, code, price, model_id, rating_id, topsnelheid_id, energiebron_id) values ('BMW 3-Series', 'Sportieve sedan', ' 3',  20000, 3, 2, 2, 1);
 insert into products ( name, discription, code, price, model_id, rating_id, topsnelheid_id, energiebron_id) values ('BMW 4-Series', 'Sportieve kleine coupe', ' 4', 25000, 4, 2, 2, 1);
   insert into products ( name, discription, code, price, model_id, rating_id, topsnelheid_id, energiebron_id) values ('BMW 5-Series', 'Grote sedan', ' 5', 30000, 5 , 1, 2, 1);
   insert into products ( name, discription, code, price, model_id, rating_id, topsnelheid_id, energiebron_id) values ('BMW 6-Series', 'Grote sportieve coupe', ' 6', 35000, 6, 2, 3, 1);

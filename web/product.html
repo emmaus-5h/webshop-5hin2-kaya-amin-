@@ -52,7 +52,7 @@
             <p class="product_discription card-text"></p>
             <ul class="product-properties">
             <li><span class="propert-name">Prijs:</span><span class="product_price"></span></li>
-              li><span class="propert-ratings">veiligheid:</span><span class="product_ratings"></span>
+              <li><span class="propert-name">veiligheid:</span><span class="product_rating"></span></li>
               
             <li><span class="propert-name">Code:</span><span class="product_code"></span></li>
             
@@ -93,6 +93,7 @@
                 clone.querySelector(".product_id").value = product.id
                 clone.querySelector(".product_id").dataset.json = JSON.stringify(product)
                 clone.querySelector(".product_image").src =`/images/${product.id}.jpg`
+              clone.querySelector(".product_ratings").textContent = product.rating
           
 clone.querySelector(".product_ratings").textContent = '${product.rating} veiligheid'
 

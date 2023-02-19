@@ -67,18 +67,20 @@ function getCategories(request, response) {
 function getProducts(request, response) {
   console.log('API ontvangt /api/products/', request.query)
   let data = []
-  const sqlOpdracht = db.prepare('SELECT products.id AS id, products.name AS name, products.description AS description, products.code AS code, products.price AS price FROM products ORDER BY id ASC')
+  const sqlOpdracht = db.prepare('SELECT products.id AS id, products.name AS name, products.discription AS discription, products.code AS code, products.price AS price, ratings.rating AS rating, topsnelheden.topsnelheid AS topsnelheid, energiebronnen.energiebron AS energiebron FROM products JOIN ratings ON ratings.id = products.rating_id JOIN topsnelheden ON topsnelheden.id = products.topsnelheid_id JOIN energiebronnen ON energiebronnen.id = products.energiebron_id JOIN models ON models.id = products.model_id ORDER BY id ASC')
   data = sqlOpdracht.all()
   // console.log(JSON.stringify(data, null, 2))
   response.status(200).send(data)
   console.log('API verstuurt /api/products/')
 }
 
+
+
 function getProductById(request, response) {
   console.log('API ontvangt /api/products/:id', request.query)
   let data = []
-  const product_id = parseInt(request.params.id)
-  const sqlOpdracht = db.prepare('SELECT products.id AS id, products.name AS name, products.description AS description, products.code AS code, products.price AS price FROM products WHERE id = ?')
+  const product_id = parseInt(request.params.id) ('SELECT products.id AS id, products.name AS name, products.description AS description, products.code AS code, products.price AS price FROM products WHERE id = ?')
+  const sqlOpdracht = db.prepare
   data = sqlOpdracht.all(product_id)
   response.status(200).json(data[0])
 }
